@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     let defaultSupplementaryViewIdentifier = "DefaultSupplementaryViewIdentifier"
     
     struct DecorationViewNames {
-        static let topLeft = "SpreadsheetTopLeftDecorationView"
+//        static let topLeft = "SpreadsheetTopLeftDecorationView"
         static let topRight = "SpreadsheetTopRightDecorationView"
         static let bottomLeft = "SpreadsheetBottomLeftDecorationView"
         static let bottomRight = "SpreadsheetBottomRightDecorationView"
@@ -32,8 +32,12 @@ class ViewController: UIViewController {
     struct SupplementaryViewNames {
         static let left = "SpreadsheetLeftRowView"
         static let right = "SpreadsheetRightRowView"
+        static let topLeft = "SpreadsheetTopLeftColumnView"
+        static let topRight = "SpreadsheetTopRightColumnView"
         static let top = "SpreadsheetTopColumnView"
         static let bottom = "SpreadsheetBottomColumnView"
+        static let bottomLeft = "SpreadsheetBottomRightColumnView"
+        static let bottomRight = "SpreadsheetBottomRightColumnView"
     }
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -62,23 +66,27 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         //DecorationView Nibs
-        let topLeftDecorationViewNib = UINib(nibName: DecorationViewNames.topLeft, bundle: nil)
-        let topRightDecorationViewNib = UINib(nibName: DecorationViewNames.topRight, bundle: nil)
-        let bottomLeftDecorationViewNib = UINib(nibName: DecorationViewNames.bottomLeft, bundle: nil)
-        let bottomRightDecorationViewNib = UINib(nibName: DecorationViewNames.bottomRight, bundle: nil)
+//        let topLeftDecorationViewNib = UINib(nibName: DecorationViewNames.topLeft, bundle: nil)
+//        let topRightDecorationViewNib = UINib(nibName: DecorationViewNames.topRight, bundle: nil)
+//        let bottomLeftDecorationViewNib = UINib(nibName: DecorationViewNames.bottomLeft, bundle: nil)
+//        let bottomRightDecorationViewNib = UINib(nibName: DecorationViewNames.bottomRight, bundle: nil)
         
         //SupplementaryView Nibs
+        let topLeftSupplementaryViewNib = UINib(nibName: SupplementaryViewNames.topLeft, bundle: nil)
+        let topRightSupplementaryViewNib = UINib(nibName: SupplementaryViewNames.topRight, bundle: nil)
         let topSupplementaryViewNib = UINib(nibName: SupplementaryViewNames.top, bundle: nil)
         let bottomSupplementaryViewNib = UINib(nibName: SupplementaryViewNames.bottom, bundle: nil)
         let leftSupplementaryViewNib = UINib(nibName: SupplementaryViewNames.left, bundle: nil)
         let rightSupplementaryViewNib = UINib(nibName: SupplementaryViewNames.right, bundle: nil)
+        let bottomLeftSupplementaryViewNib = UINib(nibName: SupplementaryViewNames.bottomLeft, bundle: nil)
+        let bottomRightSupplementaryViewNib = UINib(nibName: SupplementaryViewNames.bottomRight, bundle: nil)
         
         //Setup Layout
         let layout = SpreadsheetLayout(delegate: self,
-                                       topLeftDecorationViewNib: topLeftDecorationViewNib,
-                                       topRightDecorationViewNib: topRightDecorationViewNib,
-                                       bottomLeftDecorationViewNib: bottomLeftDecorationViewNib,
-                                       bottomRightDecorationViewNib: bottomRightDecorationViewNib)
+                                       topLeftHeader: true,
+                                       topRightHeader: true,
+                                       bottomLeftHeader: true,
+                                       bottomRightHeader: true)
         
         //Default is true, set false here if you do not want some of these sides to remain sticky
         layout.stickyLeftRowHeader = true
@@ -92,6 +100,12 @@ class ViewController: UIViewController {
         //Register Supplementary-Viewnibs for the given ViewKindTypes
         self.collectionView.register(leftSupplementaryViewNib, forSupplementaryViewOfKind: SpreadsheetLayout.ViewKindType.leftRowHeadline.rawValue, withReuseIdentifier: self.defaultSupplementaryViewIdentifier)
         self.collectionView.register(rightSupplementaryViewNib, forSupplementaryViewOfKind: SpreadsheetLayout.ViewKindType.rightRowHeadline.rawValue, withReuseIdentifier: self.defaultSupplementaryViewIdentifier)
+        self.collectionView.register(bottomLeftSupplementaryViewNib, forSupplementaryViewOfKind: SpreadsheetLayout.ViewKindType.bottomLeftColumnHeader.rawValue, withReuseIdentifier: self.defaultSupplementaryViewIdentifier)
+        self.collectionView.register(bottomRightSupplementaryViewNib, forSupplementaryViewOfKind: SpreadsheetLayout.ViewKindType.bottomRightColumnHeader.rawValue, withReuseIdentifier: self.defaultSupplementaryViewIdentifier)
+        self.collectionView.register(rightSupplementaryViewNib, forSupplementaryViewOfKind: SpreadsheetLayout.ViewKindType.rightRowHeadline.rawValue, withReuseIdentifier: self.defaultSupplementaryViewIdentifier)
+        
+        self.collectionView.register(topLeftSupplementaryViewNib, forSupplementaryViewOfKind: SpreadsheetLayout.ViewKindType.topLeftColumnHeader.rawValue, withReuseIdentifier: self.defaultSupplementaryViewIdentifier)
+        self.collectionView.register(topRightSupplementaryViewNib, forSupplementaryViewOfKind: SpreadsheetLayout.ViewKindType.topRightColumnHeader.rawValue, withReuseIdentifier: self.defaultSupplementaryViewIdentifier)
         self.collectionView.register(topSupplementaryViewNib, forSupplementaryViewOfKind: SpreadsheetLayout.ViewKindType.topColumnHeader.rawValue, withReuseIdentifier: self.defaultSupplementaryViewIdentifier)
         self.collectionView.register(bottomSupplementaryViewNib, forSupplementaryViewOfKind: SpreadsheetLayout.ViewKindType.bottomColumnFooter.rawValue, withReuseIdentifier: self.defaultSupplementaryViewIdentifier)
     }
@@ -126,6 +140,12 @@ extension ViewController: UICollectionViewDataSource {
         case .rightRowHeadline:
             let value = self.dataArray[indexPath.section].reduce(0) { $0 + $1 }
             supplementaryView.infoLabel.text = self.numberFormatter.string(from: NSNumber(value: value))
+        case .topLeftColumnHeader:
+            supplementaryView.infoLabel.text = "TopLeft"
+            supplementaryView.backgroundColor = indexPath.item % 2 == 1 ? self.lightGreyColor : UIColor.white
+        case .topRightColumnHeader:
+            supplementaryView.infoLabel.text = "TopRight"
+            supplementaryView.backgroundColor = indexPath.item % 2 == 1 ? self.lightGreyColor : UIColor.white
         case .topColumnHeader:
             supplementaryView.infoLabel.text = "Item \(indexPath.item)"
             supplementaryView.backgroundColor = indexPath.item % 2 == 1 ? self.lightGreyColor : UIColor.white
@@ -133,8 +153,12 @@ extension ViewController: UICollectionViewDataSource {
             let value = self.dataArray.map { $0[indexPath.item] }.reduce(0) { $0 + $1 }
             supplementaryView.infoLabel.text = self.numberFormatter.string(from: NSNumber(value: value))
             supplementaryView.backgroundColor = indexPath.item % 2 == 1 ? self.lightGreyColor : UIColor.white
-        default:
-            break
+        case .bottomRightColumnHeader:
+            supplementaryView.infoLabel.text = "BottomRight"
+            supplementaryView.backgroundColor = indexPath.item % 2 == 1 ? self.lightGreyColor : UIColor.white
+        case .bottomLeftColumnHeader:
+            supplementaryView.infoLabel.text = "BottomLeft"
+            supplementaryView.backgroundColor = indexPath.item % 2 == 1 ? self.lightGreyColor : UIColor.white
         }
         
         return supplementaryView

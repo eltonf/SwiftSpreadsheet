@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E4015C41E84638200B66042 /* SpreadsheetTopRightDecorationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E4015C01E84638200B66042 /* SpreadsheetTopRightDecorationView.xib */; };
-		2E4015C51E84638200B66042 /* SpreadsheetBottomLeftDecorationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E4015C11E84638200B66042 /* SpreadsheetBottomLeftDecorationView.xib */; };
-		2E4015C61E84638200B66042 /* SpreadsheetBottomRightDecorationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E4015C21E84638200B66042 /* SpreadsheetBottomRightDecorationView.xib */; };
-		2E4015C71E84638200B66042 /* SpreadsheetTopLeftDecorationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E4015C31E84638200B66042 /* SpreadsheetTopLeftDecorationView.xib */; };
+		2E4015C41E84638200B66042 /* SpreadsheetTopRightColumnView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E4015C01E84638200B66042 /* SpreadsheetTopRightColumnView.xib */; };
+		2E4015C51E84638200B66042 /* SpreadsheetBottomLeftColumnView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E4015C11E84638200B66042 /* SpreadsheetBottomLeftColumnView.xib */; };
+		2E4015C61E84638200B66042 /* SpreadsheetBottomRightColumnView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E4015C21E84638200B66042 /* SpreadsheetBottomRightColumnView.xib */; };
+		2E4015C71E84638200B66042 /* SpreadsheetTopLeftColumnView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E4015C31E84638200B66042 /* SpreadsheetTopLeftColumnView.xib */; };
 		2E4015CC1E84638F00B66042 /* SpreadsheetLeftRowView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E4015C81E84638F00B66042 /* SpreadsheetLeftRowView.xib */; };
 		2E4015CD1E84638F00B66042 /* SpreadsheetRightRowView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E4015C91E84638F00B66042 /* SpreadsheetRightRowView.xib */; };
 		2E4015CE1E84638F00B66042 /* SpreadsheetTopColumnView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E4015CA1E84638F00B66042 /* SpreadsheetTopColumnView.xib */; };
@@ -39,10 +39,10 @@
 		05EB07F7913E6773879A58BB /* Pods-SwiftSpreadsheet_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftSpreadsheet_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftSpreadsheet_Tests/Pods-SwiftSpreadsheet_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		1549AC9FD6E372C880FB0240 /* Pods-SwiftSpreadsheet_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftSpreadsheet_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftSpreadsheet_Example/Pods-SwiftSpreadsheet_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		25A4DD36B684F6C1E073250D /* SwiftSpreadsheet.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SwiftSpreadsheet.podspec; path = ../SwiftSpreadsheet.podspec; sourceTree = "<group>"; };
-		2E4015C01E84638200B66042 /* SpreadsheetTopRightDecorationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpreadsheetTopRightDecorationView.xib; sourceTree = "<group>"; };
-		2E4015C11E84638200B66042 /* SpreadsheetBottomLeftDecorationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpreadsheetBottomLeftDecorationView.xib; sourceTree = "<group>"; };
-		2E4015C21E84638200B66042 /* SpreadsheetBottomRightDecorationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpreadsheetBottomRightDecorationView.xib; sourceTree = "<group>"; };
-		2E4015C31E84638200B66042 /* SpreadsheetTopLeftDecorationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpreadsheetTopLeftDecorationView.xib; sourceTree = "<group>"; };
+		2E4015C01E84638200B66042 /* SpreadsheetTopRightColumnView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpreadsheetTopRightColumnView.xib; sourceTree = "<group>"; };
+		2E4015C11E84638200B66042 /* SpreadsheetBottomLeftColumnView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpreadsheetBottomLeftColumnView.xib; sourceTree = "<group>"; };
+		2E4015C21E84638200B66042 /* SpreadsheetBottomRightColumnView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpreadsheetBottomRightColumnView.xib; sourceTree = "<group>"; };
+		2E4015C31E84638200B66042 /* SpreadsheetTopLeftColumnView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpreadsheetTopLeftColumnView.xib; sourceTree = "<group>"; };
 		2E4015C81E84638F00B66042 /* SpreadsheetLeftRowView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpreadsheetLeftRowView.xib; sourceTree = "<group>"; };
 		2E4015C91E84638F00B66042 /* SpreadsheetRightRowView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpreadsheetRightRowView.xib; sourceTree = "<group>"; };
 		2E4015CA1E84638F00B66042 /* SpreadsheetTopColumnView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpreadsheetTopColumnView.xib; sourceTree = "<group>"; };
@@ -105,24 +105,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		2E4015D01E84639300B66042 /* DecorationViews */ = {
-			isa = PBXGroup;
-			children = (
-				2E4015C01E84638200B66042 /* SpreadsheetTopRightDecorationView.xib */,
-				2E4015C11E84638200B66042 /* SpreadsheetBottomLeftDecorationView.xib */,
-				2E4015C21E84638200B66042 /* SpreadsheetBottomRightDecorationView.xib */,
-				2E4015C31E84638200B66042 /* SpreadsheetTopLeftDecorationView.xib */,
-			);
-			name = DecorationViews;
-			sourceTree = "<group>";
-		};
 		2E4015D11E84639F00B66042 /* SupplementaryViews */ = {
 			isa = PBXGroup;
 			children = (
 				2E4015C81E84638F00B66042 /* SpreadsheetLeftRowView.xib */,
 				2E4015C91E84638F00B66042 /* SpreadsheetRightRowView.xib */,
+				2E4015C31E84638200B66042 /* SpreadsheetTopLeftColumnView.xib */,
+				2E4015C01E84638200B66042 /* SpreadsheetTopRightColumnView.xib */,
 				2E4015CA1E84638F00B66042 /* SpreadsheetTopColumnView.xib */,
 				2E4015CB1E84638F00B66042 /* SpreadsheetBottomColumnView.xib */,
+				2E4015C11E84638200B66042 /* SpreadsheetBottomLeftColumnView.xib */,
+				2E4015C21E84638200B66042 /* SpreadsheetBottomRightColumnView.xib */,
 			);
 			name = SupplementaryViews;
 			sourceTree = "<group>";
@@ -152,7 +145,6 @@
 			isa = PBXGroup;
 			children = (
 				2E4015D11E84639F00B66042 /* SupplementaryViews */,
-				2E4015D01E84639300B66042 /* DecorationViews */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -292,14 +284,14 @@
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				2E4015CC1E84638F00B66042 /* SpreadsheetLeftRowView.xib in Resources */,
-				2E4015C51E84638200B66042 /* SpreadsheetBottomLeftDecorationView.xib in Resources */,
+				2E4015C51E84638200B66042 /* SpreadsheetBottomLeftColumnView.xib in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
-				2E4015C41E84638200B66042 /* SpreadsheetTopRightDecorationView.xib in Resources */,
+				2E4015C41E84638200B66042 /* SpreadsheetTopRightColumnView.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 				2E4015CF1E84638F00B66042 /* SpreadsheetBottomColumnView.xib in Resources */,
 				2E4015CD1E84638F00B66042 /* SpreadsheetRightRowView.xib in Resources */,
-				2E4015C61E84638200B66042 /* SpreadsheetBottomRightDecorationView.xib in Resources */,
-				2E4015C71E84638200B66042 /* SpreadsheetTopLeftDecorationView.xib in Resources */,
+				2E4015C61E84638200B66042 /* SpreadsheetBottomRightColumnView.xib in Resources */,
+				2E4015C71E84638200B66042 /* SpreadsheetTopLeftColumnView.xib in Resources */,
 				2E4015CE1E84638F00B66042 /* SpreadsheetTopColumnView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
