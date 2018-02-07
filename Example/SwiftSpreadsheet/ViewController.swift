@@ -22,13 +22,6 @@ class ViewController: UIViewController {
     let defaultCellIdentifier = "DefaultCellIdentifier"
     let defaultSupplementaryViewIdentifier = "DefaultSupplementaryViewIdentifier"
     
-    struct DecorationViewNames {
-//        static let topLeft = "SpreadsheetTopLeftDecorationView"
-        static let topRight = "SpreadsheetTopRightDecorationView"
-        static let bottomLeft = "SpreadsheetBottomLeftDecorationView"
-        static let bottomRight = "SpreadsheetBottomRightDecorationView"
-    }
-    
     struct SupplementaryViewNames {
         static let left = "SpreadsheetLeftRowView"
         static let right = "SpreadsheetRightRowView"
@@ -64,12 +57,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //DecorationView Nibs
-//        let topLeftDecorationViewNib = UINib(nibName: DecorationViewNames.topLeft, bundle: nil)
-//        let topRightDecorationViewNib = UINib(nibName: DecorationViewNames.topRight, bundle: nil)
-//        let bottomLeftDecorationViewNib = UINib(nibName: DecorationViewNames.bottomLeft, bundle: nil)
-//        let bottomRightDecorationViewNib = UINib(nibName: DecorationViewNames.bottomRight, bundle: nil)
         
         //SupplementaryView Nibs
         let topLeftSupplementaryViewNib = UINib(nibName: SupplementaryViewNames.topLeft, bundle: nil)
